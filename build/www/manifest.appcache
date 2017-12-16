@@ -1,0 +1,19 @@
+CACHE MANIFEST
+#ver:v2.0.0
+#plugin:4.8.5
+
+CACHE:
+/img/i-f7-material.ccc2c70.png
+/app.8d4a095.js
+/init.8d4a095.js
+/app.8d4a095.css
+/init.8d4a095.css
+/
+/offline-service-worker.js
+/manifest.json
+/favicon-16x16.png
+/favicon-32x32.png
+/android-chrome-192x192.png
+
+NETWORK:
+*
