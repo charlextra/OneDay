@@ -1,3 +1,11 @@
 {
-  "text": "Es funktioniert!"
+  "accueil": "Accueil",
+  "bonjour": "Bonjour",
+  "description": "Description",
+  "menu": "Menu",
+  "niveaux": "Niveaux",
+  "parametres": "Paramètres",
+  "secteuractivite": "Secteur d'activité",
+  "secteuractivites": "Secteurs d'activité",
+  "text": "Es funktioniert"
 }

@@ -1,6 +1,18 @@
 [
   {
+    "path": "/accueil/",
+    "component": "home.vue"
+  },
+  {
     "path": "/home/",
     "component": "home.vue"
+  },
+  {
+    "path": "/niveaus/",
+    "component": "niveaus.vue"
+  },
+  {
+    "path": "/secteuractivites/",
+    "component": "secteuractivites.vue"
   }
 ]

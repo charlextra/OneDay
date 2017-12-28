@@ -1,9 +1,9 @@
 {
-  "title": "My App",
+  "title": "OneDay",
   "defaultLanguage": "en",
   "defaultLanguageFallback": false,
   "theme": "material",
-  "color": "indigo",
+  "color": "orange",
   "layout": "default",
   "statusbarVisibility": true,
   "statusbarTextColor": "white",
@@ -20,7 +20,9 @@
   "limitedSizeBodyBackgroundColor": "#333333",
   "showPhoneFrameOnDesktop": true,
   "phoneFrameBodyBackgroundColor": "#fafafa",
-  "framework7parameters": {},
+  "framework7parameters": {
+    "swipePanel": "left"
+  },
   "materialSubnavbarFix": true,
   "restoreHistory": true,
   "restoreComponentData": true,
