@@ -26,6 +26,8 @@
               <f7-list-item link="/accueil/" :title="$lang('accueil')" link-view="#main-view" link-close-panel></f7-list-item>
               <f7-list-item link="/niveaus/" :title="$lang('niveaux')" link-view="#main-view" link-close-panel></f7-list-item>
               <f7-list-item link="/secteuractivites/" :title="$lang('secteuractivites')" link-view="#main-view" link-close-panel></f7-list-item>
+              <f7-list-item link="/carte/" :title="$lang('carte')" link-view="#main-view" link-close-panel></f7-list-item>
+              <f7-list-item link="/accueil/" @click="$root.$signOut()" :title="$lang('deconnexion')" link-view="#main-view" link-close-panel></f7-list-item>
             </f7-list>
           </f7-page>
         </f7-pages>
@@ -76,13 +78,22 @@ export default {}
 <script>
 import Vue from 'vue';
 import fr from 'vee-validate/dist/locale/fr';
+import Datatable from 'vue2-datatable-component';
 import VeeValidate, { Validator } from 'vee-validate';
+import * as VueGoogleMaps from 'vue2-google-maps';
+  Vue.use(VueGoogleMaps, {
+    load: {
+      key: 'AIzaSyAwXpg_XYwHGQx7uytTgXtvdR4GKm8IJYU',
+      v: '3.exp',
+      // libraries: 'places', //// If you need to use place input
+    }
+  });
 //Localize takes the locale object as the second argument (optional) and merges it.
 Validator.localize('en', fr);
 
 //Install the plugin
 Vue.use(VeeValidate);
-
+Vue.use(Datatable);
 const config = {
   errorBagName: 'errors', // change if property conflicts
   fieldsBagName: 'fields',

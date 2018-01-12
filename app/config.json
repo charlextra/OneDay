@@ -10,10 +10,10 @@
   "statusbarBackgroundColor": "#000000",
   "iconBackgroundColor": "#ffffff",
   "useIconFonts": {
-    "framework7": false,
-    "material": false,
-    "ion": false,
-    "fontawesome": false
+    "framework7": true,
+    "material": true,
+    "ion": true,
+    "fontawesome": true
   },
   "limitApplicationWidth": 320,
   "limitApplicationHeight": 570,
@@ -28,25 +28,25 @@
   "restoreComponentData": true,
   "completeRoutesFile": true,
   "firebase": {
-    "apiKey": "",
-    "authDomain": "",
-    "databaseURL": "",
-    "storageBucket": "",
-    "projectId": "",
-    "allowEmailLogin": false,
-    "allowEmailRegistration": false
+    "apiKey": "AIzaSyAui0dp9zo_hYd8M1d1SUhxHYZu99azDJw",
+    "authDomain": "oneday-amen.firebaseapp.com",
+    "databaseURL": "https://oneday-amen.firebaseio.com",
+    "storageBucket": "oneday-amen.appspot.com",
+    "projectId": "oneday-amen",
+    "allowEmailLogin": true,
+    "allowEmailRegistration": true
   },
   "devFirebase": {
     "deployDevRulesOnTesting": false,
-    "apiKey": "",
-    "authDomain": "",
-    "databaseURL": "",
-    "storageBucket": "",
-    "projectId": "",
-    "allowEmailLogin": false,
-    "allowEmailRegistration": false
+    "apiKey": "AIzaSyAui0dp9zo_hYd8M1d1SUhxHYZu99azDJw",
+    "authDomain": "oneday-amen.firebaseapp.com",
+    "databaseURL": "https://oneday-amen.firebaseio.com",
+    "storageBucket": "oneday-amen.appspot.com",
+    "projectId": "oneday-amen",
+    "allowEmailLogin": true,
+    "allowEmailRegistration": true
   },
-  "loginRequiredForAllPages": false,
+  "loginRequiredForAllPages": true,
   "appStoreId": "de.scriptpilot.app-framework",
   "playStoreId": "de.scriptpilot.appframework",
   "useCordovaPlugins": [],
@@ -80,5 +80,6 @@
   "fixCodeOnBuild": false,
   "devServerPort": "8080",
   "gitignore": {},
-  "npmignore": {}
+  "npmignore": {},
+  "debug": false
 }

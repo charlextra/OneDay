@@ -4,6 +4,10 @@
     "component": "home.vue"
   },
   {
+    "path": "/carte/",
+    "component": "carte.vue"
+  },
+  {
     "path": "/home/",
     "component": "home.vue"
   },

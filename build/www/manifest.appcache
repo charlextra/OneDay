@@ -1,13 +1,13 @@
 CACHE MANIFEST
-#ver:v3.0.0
-#plugin:4.8.5
+#ver:v7.0.0
+#plugin:4.9.0
 
 CACHE:
 /img/i-f7-material.ccc2c70.png
-/app.352c383.js
-/init.352c383.js
-/app.352c383.css
-/init.352c383.css
+/app.fa090c4.js
+/init.fa090c4.js
+/app.fa090c4.css
+/init.fa090c4.css
 /
 /offline-service-worker.js
 /manifest.json

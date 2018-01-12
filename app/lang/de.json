@@ -1,11 +1,24 @@
 {
   "accueil": "Accueil",
   "bonjour": "Bonjour",
+  "carte": "Carte",
+  "deconnexion": "Déconnexion",
   "description": "Description",
+  "editer": "Editer",
+  "enregister": "Enregistrer",
+  "enregistrerniveau": "Enrégistrer un Niveau",
+  "enregistrersecteuractivite": "Enrégistrer un secteur d'activités",
+  "maposition": "Ma Position",
   "menu": "Menu",
+  "modifier": "Modifier",
+  "niveau": "Niveau",
   "niveaux": "Niveaux",
   "parametres": "Paramètres",
+  "position": "Position",
   "secteuractivite": "Secteur d'activité",
   "secteuractivites": "Secteurs d'activité",
-  "text": "Es funktioniert"
+  "supprimer": "Supprimer",
+  "terminer": "Terminer",
+  "text": "Es funktioniert",
+  "recherche":"Recherche"
 }
