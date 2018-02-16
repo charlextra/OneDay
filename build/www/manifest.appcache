@@ -1,13 +1,31 @@
 CACHE MANIFEST
-#ver:v7.0.0
+#ver:v7.0.1
 #plugin:4.9.0
 
 CACHE:
+/fonts/Framework7Icons-Regular.bb6aae4.eot
+/fonts/Framework7Icons-Regular.9900d2b.ttf
+/fonts/Framework7Icons-Regular.eb7a418.woff
+/fonts/Framework7Icons-Regular.f3e1eae.woff2
+/fonts/MaterialIcons-Regular.e79bfd8.eot
+/fonts/MaterialIcons-Regular.a37b0c0.ttf
+/fonts/MaterialIcons-Regular.012cf6a.woff
+/fonts/MaterialIcons-Regular.570eb83.woff2
+/fonts/ionicons.bdf1d30.eot
+/fonts/ionicons.d9496a2.svg
+/fonts/ionicons.74c6526.ttf
+/fonts/ionicons.311d819.woff2
+/fonts/ionicons.8141468.woff
+/fonts/fontawesome-webfont.674f50d.eot
+/fonts/fontawesome-webfont.912ec66.svg
+/fonts/fontawesome-webfont.b06871f.ttf
+/fonts/fontawesome-webfont.af7ae50.woff2
+/fonts/fontawesome-webfont.fee66e7.woff
 /img/i-f7-material.ccc2c70.png
-/app.fa090c4.js
-/init.fa090c4.js
-/app.fa090c4.css
-/init.fa090c4.css
+/app.596a82a.js
+/init.596a82a.js
+/app.596a82a.css
+/init.596a82a.css
 /
 /offline-service-worker.js
 /manifest.json

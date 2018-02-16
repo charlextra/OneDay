@@ -38,11 +38,11 @@
         </li>
       </ul>
       <div v-if="this.secteuractivites.edit==''">
-        <f7-button small fill raised bg="orange"  @click.prevent="validateBeforeSubmit" internal>{{$lang('enregistrer')}}</f7-button>
+        <f7-button small fill raised bg="orange"  @click.prevent="validateBeforeSubmit" internal>{{$lang('sauvegarder')}}</f7-button>
         <!--<f7-button route-tab-link="#tab-1" href="/tabs/">Button 1</f7-button>-->
       </div>
       <div v-else>
-        <f7-button small fill raised bg="green"  @click.prevent="edit()" internal>{{$lang('enregistrer')}}</f7-button>
+        <f7-button small fill raised bg="green"  @click.prevent="edit()" internal>{{$lang('sauvegarder')}}</f7-button>
         <br />
         <f7-button small fill raised bg="red"  @click.prevent="annuler()" internal>{{$lang('terminer')}}</f7-button>
       <!--<f7-button @click="$db('secteuractivites.description', null)">Remove data</f7-button>-->

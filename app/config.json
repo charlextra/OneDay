@@ -15,8 +15,8 @@
     "ion": true,
     "fontawesome": true
   },
-  "limitApplicationWidth": 320,
-  "limitApplicationHeight": 570,
+  "limitApplicationWidth": 360,
+  "limitApplicationHeight": 640,
   "limitedSizeBodyBackgroundColor": "#333333",
   "showPhoneFrameOnDesktop": true,
   "phoneFrameBodyBackgroundColor": "#fafafa",
