@@ -51,8 +51,8 @@
     </form>
   </f7-block>
     <f7-block>
-      <f7-list>
-      <f7-list-item swipeout v-for="(value, key) in this.$db('secteuractivites')"  :title="value.libsecteur" @swipeout:deleted="supprimer(key)">
+      <f7-list media-list>
+      <f7-list-item swipeout v-for="(value, key) in this.$db('secteuractivites')"  :title="value.libsecteur" :subtitle="subtitle" :text="value.description" @swipeout:deleted="supprimer(key)">
         <f7-swipeout-actions>
           <f7-swipeout-button close color="blue" @click="SetEdit(key)">{{$lang('editer')}}</f7-swipeout-button>
           <f7-swipeout-button v-show="value.edit==''" delete>{{$lang('supprimer')}}</f7-swipeout-button>

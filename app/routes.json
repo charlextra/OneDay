@@ -16,7 +16,15 @@
     "component": "niveaus.vue"
   },
   {
+    "path": "/personne/",
+    "component": "personne.vue"
+  },
+  {
     "path": "/secteuractivites/",
     "component": "secteuractivites.vue"
+  },
+  {
+    "path": "/todos/",
+    "component": "todos.vue"
   }
 ]

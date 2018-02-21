@@ -26,7 +26,9 @@
               <f7-list-item link="/accueil/" :title="$lang('accueil')" link-view="#main-view" link-close-panel></f7-list-item>
               <f7-list-item link="/niveaus/" :title="$lang('niveaux')" link-view="#main-view" link-close-panel></f7-list-item>
               <f7-list-item link="/secteuractivites/" :title="$lang('secteuractivites')" link-view="#main-view" link-close-panel></f7-list-item>
+              <f7-list-item link="/personne/" :title="$lang('personnes')" link-view="#main-view" link-close-panel></f7-list-item>
               <f7-list-item link="/carte/" :title="$lang('carte')" link-view="#main-view" link-close-panel></f7-list-item>
+              <f7-list-item link="/todos/" :title="$lang('taches')" link-view="#main-view" link-close-panel></f7-list-item>
               <f7-list-item link="/accueil/" @click="$root.$signOut()" :title="$lang('deconnexion')" link-view="#main-view" link-close-panel></f7-list-item>
             </f7-list>
           </f7-page>
