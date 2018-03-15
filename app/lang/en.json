@@ -12,6 +12,7 @@
   "enregistrerniveau": "Enrégistrer un Niveau",
   "enregistrerpersonne": "Enregistrer une personne",
   "enregistrersecteuractivite": "Enrégistrer un secteur d'activités",
+  "enregistrertache": "Enrégistrer une tâche",
   "femme": "Femme",
   "homme": "Homme",
   "libelle": "Libellé",
@@ -35,14 +36,13 @@
   "secteuractivites": "Secteurs d'activité",
   "sexe": "Sexe",
   "supprimer": "Supprimer",
+  "tache": "Tâche",
+  "taches": "Tâches",
   "tel1": "Numéro de téléphone 1",
   "tel2": "Numéro de téléphone 2",
   "terminer": "Terminer",
   "text": "It works!",
   "transit": "transit",
   "utilisateur": "Utilisateur",
-  "utilisateurs": "Utilisateurs",
-  "enregistrertache":"Enrégistrer une tache",
-  "taches":"Tâches",
-  "tache":"Tâche"
+  "utilisateurs": "Utilisateurs"
 }

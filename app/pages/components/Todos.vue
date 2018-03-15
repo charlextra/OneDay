@@ -40,6 +40,7 @@
       value: {type: Array, default () { return [] }}
     },
     data () {
+      this.$db('todos') ? this.value = this.$db('todos') : this.value = []
       return {
         todos: this.value,
         newTodo: '',
@@ -58,6 +59,9 @@
         },
         set (value) {
           this.todos.forEach(todo => {
+            todo.completed = value
+          })
+          this.$fireDB('todos').forEach(todo => {
             todo.completed = value
           })
         }
@@ -81,20 +85,27 @@
       deleteTodo (todo) {
         this.todos = this.todos.filter(i => i !== todo)
         this.emit('input', this.todos)
+        this.$fireDB('todos').set(this.todos);
       },
       deleteCompleted () {
         this.todos = this.todos.filter(todo => !todo.completed)
         this.emit('input', this.todos)
+        this.$fireDB('todos').set(this.todos);
       },
       editTodo (todo) {
-        this.oldTodo = todo.name
+        this.oldTodo = this.oldTodo
         this.editing = todo
+        this.$fireDB('oldTodo').set(this.oldTodo);
+        this.$fireDB('editing').set(todo);
+
       },
       donEdit () {
         this.editing = null
+        this.$fireDB('editing').set(null);
       },
       cancelEdit () {
         this.editing.name = this.oldTodo
+        this.$fireDB('editing.name').set(this.oldTodo);
         this.donEdit()
       },
       addTodo () {
@@ -102,6 +113,8 @@
           completed: false,
           name: this.newTodo
         })
+        this.$fireDB('todos').set(this.todos);
+        this.$fireDB('newTodo').set('');
         this.newTodo = ''
       }
     },
@@ -113,8 +126,14 @@
           })
         }
       }
+    },
+    created() {
+      this.$db('todos').on('value', (snap) => {
+      this.$fireDB('todos', snap.val())
+    })
     }
   }
+
 </script>
 <style src="./todos.css">
 
