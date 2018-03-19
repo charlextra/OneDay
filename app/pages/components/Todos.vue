@@ -1,5 +1,11 @@
 <template>
-  <section class="todoapp">
+  <section>
+  <!--  <f7-block>
+      <ul class="filters" align="right">
+        <li><a href="#" class="selected" @click.prevent="synchronisation()"> <i class="fa fa-refresh"></i> Synchroniser les tâches</a></li>
+      </ul>
+    </f7-block><br/><br/>-->
+      <div class="todoapp">
     <header class="header">
       <input type="text" class="new-todo" placeholder="Ajouter une tache" v-model="newTodo" @keyup.enter="addTodo">
     </header>
@@ -31,7 +37,8 @@
         </span>
       <button class="clear-completed" v-show="completed" @click.prevent="deleteCompleted">Supprimer les finis</button>
     </f7-block>
-    </footer>
+  </footer>
+</div>
   </section>
 </template>
 <script>
@@ -61,7 +68,7 @@
           this.todos.forEach(todo => {
             todo.completed = value
           })
-          this.$fireDB('todos').forEach(todo => {
+          this.$db('todos').forEach(todo => {
             todo.completed = value
           })
         }
@@ -83,29 +90,37 @@
     },
     methods: {
       deleteTodo (todo) {
+        this.$fireDB('todos').set(this.todos.filter(i => i !== todo))
+        this.$fireDB('todos').on('value', (snap) => {
+        this.$db('todos', snap.val())
+      })
         this.todos = this.todos.filter(i => i !== todo)
         this.emit('input', this.todos)
-        this.$fireDB('todos').set(this.todos);
+
       },
       deleteCompleted () {
+        this.$fireDB('todos').set(this.todos.filter(i => i !== todo))
+        this.$fireDB('todos').on('value', (snap) => {
+        this.$db('todos', snap.val())
+        })
         this.todos = this.todos.filter(todo => !todo.completed)
         this.emit('input', this.todos)
-        this.$fireDB('todos').set(this.todos);
+
       },
       editTodo (todo) {
         this.oldTodo = this.oldTodo
         this.editing = todo
-        this.$fireDB('oldTodo').set(this.oldTodo);
-        this.$fireDB('editing').set(todo);
+        this.$db('oldTodo').set(this.oldTodo);
+        this.$db('editing').set(todo);
 
       },
       donEdit () {
         this.editing = null
-        this.$fireDB('editing').set(null);
+        this.$db('editing').set(null);
       },
       cancelEdit () {
         this.editing.name = this.oldTodo
-        this.$fireDB('editing.name').set(this.oldTodo);
+        this.$db('editing.name').set(this.oldTodo);
         this.donEdit()
       },
       addTodo () {
@@ -116,6 +131,9 @@
         this.$fireDB('todos').set(this.todos);
         this.$fireDB('newTodo').set('');
         this.newTodo = ''
+      },
+      synchronisation(){
+          this.$f7.alert('La synchronisation a été effectuée','Succès');
       }
     },
     directives: {
