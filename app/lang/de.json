@@ -68,5 +68,7 @@
   "v_sexe" : "Le sexe",
   "v_prenoms" : "Le prénom ",
   "v_tel2" : "Le numéro de téléphone 2 ",
-  "v_secteuractivite_id" : "Le secteur d'activités "
+  "v_secteuractivite_id" : "Le secteur d'activités ",
+  "feminin": "Féminin",
+  "masculin": "Masculin"
 }

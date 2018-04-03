@@ -37,6 +37,19 @@
           </div>
         </li>
         <li>
+          <a href="#" class="item-link smart-select">
+            <select name="fruits">
+              <option value="H" data-option-icon="fa fa-male">{{this.$lang('masculin')}}</option>
+              <option value="F" data-option-icon="fa fa-female">{{this.$lang('feminin')}}</option>
+            </select>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title">{{this.$lang('sexe')}}</div>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
           <div class="item-content">
             <div class="item-inner">
               <p :class="{ 'control': true }">

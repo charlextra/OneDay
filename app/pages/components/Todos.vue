@@ -130,6 +130,9 @@
         })
         this.$fireDB('todos').set(this.todos);
         this.$fireDB('newTodo').set('');
+        this.$fireDB('todos').on('value', (snap) => {
+        this.$db('todos', snap.val())
+      });
         this.newTodo = ''
       },
       synchronisation(){
