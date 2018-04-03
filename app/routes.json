@@ -12,6 +12,10 @@
     "component": "home.vue"
   },
   {
+    "path": "/jobs/",
+    "component": "jobs.vue"
+  },
+  {
     "path": "/niveaus/",
     "component": "niveaus.vue"
   },

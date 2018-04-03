@@ -16,7 +16,7 @@
               <p :class="{ 'control': true }">
                 <div class="item-title label">{{$lang('niveaux')}}</div>
                 <div class="item-input">
-                  <input v-validate="'required'" :class="{'input': true, 'is-danger': errors.has('libniv') }" v-model="niveaus.libniv" name="libniv" data-vv-as="Le libellé du niveau" type="text" :placeholder="$lang('niveaux')"/>
+                  <input v-validate="'required'" :class="{'input': true, 'is-danger': errors.has('libniv') }" v-model="niveaus.libniv" name="libniv" :data-vv-as="$lang('v_libniv')" type="text" :placeholder="$lang('niveaux')"/>
                 </div>
                 <span v-show="errors.has('libniv')" class="danger">{{ errors.first('libniv') }}</span>
               </p>
@@ -29,7 +29,7 @@
               <p :class="{ 'control': true }">
                 <div class="item-title label">{{$lang('description')}}</div>
                 <div class="item-input">
-                  <input v-validate="'required'" :class="{'input': true, 'is-danger': errors.has('description') }" v-model="niveaus.description" name="description" data-vv-as="La description" type="text" :placeholder="$lang('description')"/>
+                  <input v-validate="'required'" :class="{'input': true, 'is-danger': errors.has('description') }" v-model="niveaus.description" name="description" :data-vv-as="$lang('v_description')" type="text" :placeholder="$lang('description')"/>
                 </div>
                 <span v-show="errors.has('description')" class="danger">{{ errors.first('description') }}</span>
               </p>
@@ -42,7 +42,7 @@
               <p :class="{ 'control': true }">
                 <div class="item-title label">{{$lang('note')}}</div>
                 <div class="item-input">
-                  <input v-validate="'required'" :class="{'input': true, 'is-danger': errors.has('note') }" v-model="niveaus.note" name="note" data-vv-as="La note" type="number" :placeholder="$lang('note')"/>
+                  <input v-validate="'required'" :class="{'input': true, 'is-danger': errors.has('note') }" v-model="niveaus.note" name="note" :data-vv-as="$lang('v_note')" type="number" :placeholder="$lang('note')"/>
                 </div>
                 <span v-show="errors.has('note')" class="danger">{{ errors.first('note') }}</span>
               </p>
@@ -83,6 +83,14 @@ export default {
             libniv: '',
             description: '',
             edit:''
+        },
+        message: {
+          error: this.$lang('error'),
+          e_ajout: this.$lang('e_ajout'),
+          e_modification: this.$lang('e_modification'),
+          success: this.$lang('success'),
+          s_ajout: this.$lang('s_ajout'),
+          s_mofification: this.$lang('s_modification')
         }
       }
     },
@@ -93,11 +101,11 @@ export default {
           // eslint-disable-next-line
           //this.$db('niveaus', this.niveaus);
           this.$fireDB('niveaus').push(this.niveaus);
-          this.$f7.alert('enrégistrement effectué','Succès');
+          this.$f7.alert(this.message.s_ajout, this.message.success);
+
           return;
         }
-        this.$f7.alert('Les informations du formulaire sont incorrects','Erreur');
-
+        this.$f7.alert(this.message.e_ajout, this.message.error);
       });
     },
     supprimer(key){
@@ -116,7 +124,7 @@ export default {
       this.$fireDB('niveaus').child(this.niveaus.edit).update(this.niveaus);
       this.$fireDB('niveaus').child(this.niveaus.edit).update({edit: ''});
       this.niveaus.edit = '';
-      this.$f7.alert('Modification réussie','Succès');
+      this.$f7.alert(this.message.s_modification, this.message.success);
     }
 
   },
