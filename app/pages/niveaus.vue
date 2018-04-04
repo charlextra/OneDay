@@ -90,7 +90,7 @@ export default {
           e_modification: this.$lang('e_modification'),
           success: this.$lang('success'),
           s_ajout: this.$lang('s_ajout'),
-          s_mofification: this.$lang('s_modification')
+          s_modification: this.$lang('s_modification')
         }
       }
     },

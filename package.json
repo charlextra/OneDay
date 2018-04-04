@@ -1,6 +1,6 @@
 {
   "name": "Amen",
-  "version": "7.0.1",
+  "version": "8.1.1",
   "devDependencies": {
     "app-framework": "^1.20.0",
     "js-beautify": "^1.6.12",

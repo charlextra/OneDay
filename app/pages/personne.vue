@@ -37,8 +37,9 @@
           </div>
         </li>
         <li>
+        <p :class="{ 'control': true }">
           <a href="#" class="item-link smart-select">
-            <select name="fruits">
+            <select v-validate="'required'" :class="{'input': true, 'is-danger': errors.has('sexe') }" v-model="personnes.sexe" name="sexe" :data-vv-as="$lang('v_sexe')" :placeholder="$lang('sexe')">
               <option value="H" data-option-icon="fa fa-male">{{this.$lang('masculin')}}</option>
               <option value="F" data-option-icon="fa fa-female">{{this.$lang('feminin')}}</option>
             </select>
@@ -48,6 +49,8 @@
               </div>
             </div>
           </a>
+          <span v-show="errors.has('sexe')" class="danger">{{ errors.first('sexe') }}</span>
+        </p>
         </li>
         <li>
           <div class="item-content">
@@ -138,6 +141,7 @@ export default {
             email: '',
             tel1:'',
             tel2:'',
+            sexe:'',
             edit:''
         },
         message: {
@@ -146,7 +150,7 @@ export default {
           e_modification: this.$lang('e_modification'),
           success: this.$lang('success'),
           s_ajout: this.$lang('s_ajout'),
-          s_mofification: this.$lang('s_modification')
+          s_modification: this.$lang('s_modification')
         }
       }
     },
